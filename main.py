@@ -1,22 +1,6 @@
 # tenta importar o umqtt, caso não estiver instalado ele faz a instalacao
-try:
-    import uasyncio
-except:
-    import upip
-
-    upip.install('uasyncio')
-    print('umqtt Instalado !!!')
-    import uasyncio
-
-try:
-    from umqtt.simple import MQTTClient
-except:
-    import upip
-
-    upip.install('micropython-umqtt.simple')
-    print('umqtt Instalado !!!')
-    from umqtt.simple import MQTTClient
-
+import uasyncio
+from umqtt.simple import MQTTClient
 from urandom import randint
 from ujson import loads
 from machine import Pin
